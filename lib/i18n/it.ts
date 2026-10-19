@@ -3,7 +3,7 @@
 
 import type { Widen } from './types';
 import { nocturne } from './themes/nocturne';
-import { riviera } from './themes/riviera';
+import { riserva } from './themes/riserva';
 import { grandPrix } from './themes/grand-prix';
 import { itinerary } from './themes/itinerary';
 import { marque } from './themes/marque';
@@ -277,7 +277,7 @@ const it = {
   },
   th: {
     nocturne: nocturne.it,
-    riviera: riviera.it,
+    riserva: riserva.it,
     'grand-prix': grandPrix.it,
     itinerary: itinerary.it,
     marque: marque.it,

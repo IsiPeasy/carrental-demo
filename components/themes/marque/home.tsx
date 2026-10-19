@@ -66,7 +66,7 @@ export function Hero() {
             <Link href={href('/configura/')} className="m-btn">
               {t('cta.builder')} <span aria-hidden>→</span>
             </Link>
-            <Link href={href('/flotta/')} className="m-btn-ghost">
+            <Link href={href('/collezione/')} className="m-btn-ghost">
               {t('cta.fleet')}
             </Link>
           </div>
@@ -80,7 +80,7 @@ export function Hero() {
               const idx = r * 4 + j;
               if (slug === 'all')
                 return (
-                  <Link key="all" href={href('/flotta/')} className="m-tile m-tile-all">
+                  <Link key="all" href={href('/collezione/')} className="m-tile m-tile-all">
                     <span className="m-tile-head">
                       <span className="m-kicker">{String(idx + 1).padStart(2, '0')}</span>
                       <span className="m-kicker hidden md:inline">

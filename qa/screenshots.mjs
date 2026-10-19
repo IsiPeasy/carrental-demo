@@ -1,15 +1,15 @@
-// QA: screenshots of "/" and, for every style, home, flotta and configura?step=0..4
+// QA: screenshots of "/" and, for every style, home, collezione and configura?step=0..4
 // at 1440×900 and 390×844 → qa/screenshots/. Also collects console errors and
 // verifies the generated WhatsApp link on the summary step.
 //
 // Usage:  npm run build && npx serve out -l 4321 &   then   npm run qa
-//   env:  BASE=http://localhost:4321  STYLES=nocturne,riviera  ONLY=home,flotta,configura
+//   env:  BASE=http://localhost:4321  STYLES=nocturne,riserva  ONLY=home,collezione,configura
 import { chromium } from 'playwright';
 import { mkdirSync, writeFileSync } from 'node:fs';
 
 const BASE = process.env.BASE ?? 'http://localhost:4321';
-const STYLES = (process.env.STYLES ?? 'nocturne,riviera,grand-prix,itinerary,marque').split(',');
-const ONLY = (process.env.ONLY ?? 'landing,home,flotta,configura').split(',');
+const STYLES = (process.env.STYLES ?? 'nocturne,riserva,grand-prix,itinerary,marque').split(',');
+const ONLY = (process.env.ONLY ?? 'landing,home,collezione,configura').split(',');
 const OUT = new URL('./screenshots/', import.meta.url).pathname;
 mkdirSync(OUT, { recursive: true });
 
@@ -63,7 +63,7 @@ for (const vp of VIEWPORTS) {
   if (ONLY.includes('landing')) await shoot('/', '00-landing');
   for (const s of STYLES) {
     if (ONLY.includes('home')) await shoot(`/${s}/`, `${s}-1-home`);
-    if (ONLY.includes('flotta')) await shoot(`/${s}/flotta/`, `${s}-2-flotta`);
+    if (ONLY.includes('collezione')) await shoot(`/${s}/collezione/`, `${s}-2-collezione`);
     if (ONLY.includes('configura'))
       for (let i = 0; i <= 4; i++) {
         await shoot(`/${s}/configura/?step=${i}`, `${s}-3-configura-${i}`);

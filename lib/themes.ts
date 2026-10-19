@@ -47,7 +47,7 @@ export interface BuilderLayoutProps {
 }
 
 export interface FleetSectionProps {
-  /** home = teaser on the home page, catalog = /flotta with filters */
+  /** home = teaser on the home page, catalog = /collezione with filters */
   variant: 'home' | 'catalog';
 }
 
@@ -102,7 +102,7 @@ const KEYS: (keyof ThemeComponents)[] = [
 
 const LOADERS: Record<StyleId, () => Promise<ThemeModule>> = {
   nocturne: () => import('@/components/themes/nocturne'),
-  riviera: () => import('@/components/themes/riviera'),
+  riserva: () => import('@/components/themes/riserva'),
   'grand-prix': () => import('@/components/themes/grand-prix'),
   itinerary: () => import('@/components/themes/itinerary'),
   marque: () => import('@/components/themes/marque'),
@@ -133,13 +133,14 @@ const SCENE3D: Record<StyleId, Scene3DProps> = {
     dolly: true,
     accent: '#C8A96A',
   },
-  riviera: {
-    background: 'transparent',
-    floor: 'none',
-    keyLight: { color: '#FFF4E2', intensity: 2.4, direction: [4, 6, 3] },
-    rimLight: { color: '#C96F4A', intensity: 1.2, direction: [-5, 3, -4] },
-    cameraPreset: 'hero',
-    accent: '#C96F4A',
+  riserva: {
+    background: '#0A1F1D',
+    floor: 'reflective',
+    keyLight: { color: '#EDF2EE', intensity: 1.4, direction: [3, 6, 4] },
+    rimLight: { color: '#8FD9C6', intensity: 2.2, direction: [-5, 2.5, -4] },
+    envIntensity: 0.5,
+    cameraPreset: 'side',
+    accent: '#8FD9C6',
   },
   'grand-prix': {
     background: '#EFE7D6',

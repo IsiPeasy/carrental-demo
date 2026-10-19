@@ -55,7 +55,7 @@ export default function Hero() {
             <Link href={href('/configura/')} className="gp-btn gp-btn-red">
               {t('cta.request')} <span aria-hidden>→</span>
             </Link>
-            <Link href={href('/flotta/')} className="gp-btn gp-btn-ghost">
+            <Link href={href('/collezione/')} className="gp-btn gp-btn-ghost">
               {t('cta.fleet')}
             </Link>
           </div>

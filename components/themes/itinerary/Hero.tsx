@@ -46,7 +46,7 @@ export default function Hero() {
             <Link href={href('/configura/')} className="itin-btn itin-btn-primary">
               {t('cta.builder')} <Arrow />
             </Link>
-            <Link href={href('/flotta/')} className="itin-btn itin-btn-ghost">
+            <Link href={href('/collezione/')} className="itin-btn itin-btn-ghost">
               {t('cta.fleet')}
             </Link>
           </div>

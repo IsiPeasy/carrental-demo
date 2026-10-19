@@ -2,7 +2,7 @@
 
 // Fixed pill (bottom-right) on every page: 5 styles + IT/EN.
 // Switching style keeps the route and the query (/nocturne/configura/?step=2
-// → /riviera/configura/?step=2). Builder state lives in the store, so it survives.
+// → /riserva/configura/?step=2). Builder state lives in the store, so it survives.
 
 import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';

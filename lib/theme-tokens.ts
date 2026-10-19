@@ -3,8 +3,8 @@
 
 import type { L10n } from './data';
 
-export type StyleId = 'nocturne' | 'riviera' | 'grand-prix' | 'itinerary' | 'marque';
-export const STYLE_IDS: StyleId[] = ['nocturne', 'riviera', 'grand-prix', 'itinerary', 'marque'];
+export type StyleId = 'nocturne' | 'riserva' | 'grand-prix' | 'itinerary' | 'marque';
+export const STYLE_IDS: StyleId[] = ['nocturne', 'riserva', 'grand-prix', 'itinerary', 'marque'];
 export const DEFAULT_STYLE: StyleId = 'nocturne';
 
 export interface ThemeTokens {
@@ -48,17 +48,17 @@ export const THEME_META: Record<StyleId, ThemeMeta> = {
       scheme: 'dark',
     },
   },
-  riviera: {
-    slug: 'riviera',
-    name: 'Riviera',
-    tagline: { it: 'Old money mediterraneo, editoriale.', en: 'Mediterranean old money, editorial.' },
-    audience: { it: 'Luxury traveler, wedding, charter guest.', en: 'Luxury travelers, weddings, charter guests.' },
+  riserva: {
+    slug: 'riserva',
+    name: 'Riserva',
+    tagline: { it: 'Club privato in verde petrolio, editoriale e silenzioso.', en: 'A private club in deep petrol green, editorial and quiet.' },
+    audience: { it: 'Clientela abituale, family office, chi chiede riservatezza.', en: 'Regular clients, family offices, those who ask for privacy.' },
     tokens: {
-      colors: { bg: '#F5EFE4', surface: '#FBF8F2', ink: '#13233F', ink2: '#5A6478', accent: '#1E4E79', accent2: '#C96F4A', line: '#E2D8C6', onAccent: '#FBF8F2' },
-      fonts: { display: "var(--f-fraunces), Fraunces, Georgia, serif", body: "var(--f-dm-sans), 'DM Sans', system-ui, sans-serif", mono: "var(--f-dm-sans), ui-monospace, monospace" },
+      colors: { bg: '#0A1F1D', surface: '#0F2E2B', ink: '#EDF2EE', ink2: '#A3B8B2', accent: '#8FD9C6', accent2: '#0F3D3A', line: '#1E4440', onAccent: '#0A1F1D' },
+      fonts: { display: "var(--f-cormorant), 'Cormorant Garamond', Garamond, serif", body: "var(--f-inter), Inter, system-ui, sans-serif", mono: "var(--f-inter), ui-monospace, monospace" },
       radius: '2px',
-      motion: { ease: 'cubic-bezier(.33,0,.2,1)', fast: '0.6s', base: '0.9s', slow: '1.2s' },
-      scheme: 'light',
+      motion: { ease: 'cubic-bezier(.22,.61,.36,1)', fast: '0.5s', base: '0.9s', slow: '1.4s' },
+      scheme: 'dark',
     },
   },
   'grand-prix': {

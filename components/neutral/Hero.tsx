@@ -18,7 +18,7 @@ export default function Hero() {
         <p className="mt-4 max-w-md text-ink-2">{t('claims.concierge')}</p>
         <div className="mt-8 flex flex-wrap gap-3">
           <Link href={href('/configura/')} className="rounded-theme bg-accent px-5 py-3 text-on-accent">{t('cta.request')}</Link>
-          <Link href={href('/flotta/')} className="rounded-theme border border-line px-5 py-3">{t('cta.fleet')}</Link>
+          <Link href={href('/collezione/')} className="rounded-theme border border-line px-5 py-3">{t('cta.fleet')}</Link>
         </div>
       </div>
       <CarSilhouette bodyType={car.bodyType} color={car.color.hex} className="w-full" />

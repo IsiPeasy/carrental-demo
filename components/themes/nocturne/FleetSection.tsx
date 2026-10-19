@@ -98,7 +98,7 @@ function Gallery() {
           </li>
         ))}
         <li className="nc-gallery-end">
-          <Link href={href('/flotta/')} className="nc-btn nc-btn-ghost">
+          <Link href={href('/collezione/')} className="nc-btn nc-btn-ghost">
             {t('th.nocturne.viewing.all')} →
           </Link>
         </li>

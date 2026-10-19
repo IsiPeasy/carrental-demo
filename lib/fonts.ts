@@ -5,8 +5,7 @@ import {
   Anton,
   Archivo,
   Bodoni_Moda,
-  DM_Sans,
-  Fraunces,
+  Cormorant_Garamond,
   Geist,
   Geist_Mono,
   Inter,
@@ -17,8 +16,7 @@ import {
 
 const bodoni = Bodoni_Moda({ subsets: ['latin'], style: ['normal', 'italic'], variable: '--f-bodoni', display: 'swap' });
 const interTight = Inter_Tight({ subsets: ['latin'], weight: ['300', '400', '500', '600'], variable: '--f-inter-tight', display: 'swap' });
-const fraunces = Fraunces({ subsets: ['latin'], style: ['normal', 'italic'], axes: ['opsz', 'SOFT'], variable: '--f-fraunces', display: 'swap', preload: false });
-const dmSans = DM_Sans({ subsets: ['latin'], variable: '--f-dm-sans', display: 'swap', preload: false });
+const cormorant = Cormorant_Garamond({ subsets: ['latin'], weight: ['300', '400', '500'], style: ['normal', 'italic'], variable: '--f-cormorant', display: 'swap', preload: false });
 const anton = Anton({ subsets: ['latin'], weight: '400', variable: '--f-anton', display: 'swap', preload: false });
 const archivo = Archivo({ subsets: ['latin'], variable: '--f-archivo', display: 'swap', preload: false });
 const spaceMono = Space_Mono({ subsets: ['latin'], weight: ['400', '700'], variable: '--f-space-mono', display: 'swap', preload: false });
@@ -28,7 +26,7 @@ const inter = Inter({ subsets: ['latin'], variable: '--f-inter', display: 'swap'
 const jetbrains = JetBrains_Mono({ subsets: ['latin'], variable: '--f-jetbrains', display: 'swap', preload: false });
 
 export const fontVariables = [
-  bodoni, interTight, fraunces, dmSans, anton, archivo, spaceMono, geist, geistMono, inter, jetbrains,
+  bodoni, interTight, cormorant, anton, archivo, spaceMono, geist, geistMono, inter, jetbrains,
 ]
   .map((f) => f.variable)
   .join(' ');

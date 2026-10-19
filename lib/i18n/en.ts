@@ -1,6 +1,6 @@
 import type { Dict } from './it';
 import { nocturne } from './themes/nocturne';
-import { riviera } from './themes/riviera';
+import { riserva } from './themes/riserva';
 import { grandPrix } from './themes/grand-prix';
 import { itinerary } from './themes/itinerary';
 import { marque } from './themes/marque';
@@ -274,7 +274,7 @@ const en: Dict = {
   },
   th: {
     nocturne: nocturne.en,
-    riviera: riviera.en,
+    riserva: riserva.en,
     'grand-prix': grandPrix.en,
     itinerary: itinerary.en,
     marque: marque.en,

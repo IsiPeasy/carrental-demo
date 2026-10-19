@@ -2,7 +2,7 @@
 
 /* Theme-specific CSS — every rule inside is scoped under [data-theme="<id>"]. */
 @import '../components/themes/nocturne/styles.css';
-@import '../components/themes/riviera/styles.css';
+@import '../components/themes/riserva/styles.css';
 @import '../components/themes/grand-prix/styles.css';
 @import '../components/themes/itinerary/styles.css';
 @import '../components/themes/marque/styles.css';

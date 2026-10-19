@@ -106,7 +106,7 @@ export default function FleetSection({ variant }: FleetSectionProps) {
             <p className="mt-3 max-w-md text-base font-semibold text-ink-2">{t('th.grand-prix.grid.lead')}</p>
           </div>
           {variant === 'home' && (
-            <Link href={href('/flotta/')} className="gp-btn gp-btn-ghost">
+            <Link href={href('/collezione/')} className="gp-btn gp-btn-ghost">
               {t('th.grand-prix.grid.all')} <span aria-hidden>→</span>
             </Link>
           )}

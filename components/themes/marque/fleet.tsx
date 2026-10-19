@@ -75,7 +75,7 @@ export function FleetSection({ variant }: FleetSectionProps) {
             </h2>
             <p className="mt-3 max-w-xl text-ink-2">{t('th.marque.fleet.homeLead')}</p>
           </div>
-          <Link href={href('/flotta/')} className="m-btn-ghost">
+          <Link href={href('/collezione/')} className="m-btn-ghost">
             {t('th.marque.fleet.viewAll')} →
           </Link>
         </div>

@@ -109,7 +109,7 @@ export default function FleetSection({ variant }: FleetSectionProps) {
           title={t('fleet.title')}
           lead={t('fleet.lead')}
           aside={
-            <Link href={href('/flotta/')} className="itin-btn itin-btn-ghost">
+            <Link href={href('/collezione/')} className="itin-btn itin-btn-ghost">
               {t('th.itinerary.fleet.all')} <Arrow />
             </Link>
           }

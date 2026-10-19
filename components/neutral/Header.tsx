@@ -11,7 +11,7 @@ export default function Header() {
   const path = usePathname();
   const links = [
     { href: href('/'), label: t('nav.home') },
-    { href: href('/flotta/'), label: t('nav.fleet') },
+    { href: href('/collezione/'), label: t('nav.fleet') },
     { href: href('/configura/'), label: t('nav.builder') },
   ];
   return (

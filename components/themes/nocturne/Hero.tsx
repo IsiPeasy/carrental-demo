@@ -59,7 +59,7 @@ export default function Hero() {
             <Link href={href('/configura/')} className="nc-btn nc-btn-solid">
               {t('cta.request')}
             </Link>
-            <Link href={href('/flotta/')} className="nc-link nc-label">
+            <Link href={href('/collezione/')} className="nc-link nc-label">
               {t('cta.fleet')}
             </Link>
           </div>

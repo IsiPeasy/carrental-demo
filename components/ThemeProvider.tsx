@@ -31,7 +31,7 @@ export function useTheme(): Theme {
   return getTheme(useContext(ThemeCtx));
 }
 
-/** Build a path inside the current style: href('/flotta/') → '/riviera/flotta/'. */
+/** Build a path inside the current style: href('/collezione/') → '/riserva/collezione/'. */
 export function useStyleHref() {
   const style = useContext(ThemeCtx);
   return (path = '/') => `/${style}${path.startsWith('/') ? path : '/' + path}`;

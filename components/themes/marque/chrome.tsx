@@ -20,7 +20,7 @@ export function Header() {
   const path = usePathname();
   const links = [
     { href: href('/#marche'), label: t('th.marque.nav.brands'), match: '#', cls: 'hidden xs:inline-flex' },
-    { href: href('/flotta/'), label: t('nav.fleet'), match: href('/flotta/'), cls: 'inline-flex' },
+    { href: href('/collezione/'), label: t('nav.fleet'), match: href('/collezione/'), cls: 'inline-flex' },
   ];
   const inBuilder = path.startsWith(href('/configura/'));
   return (
