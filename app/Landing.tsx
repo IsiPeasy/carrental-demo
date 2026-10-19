@@ -16,7 +16,7 @@ export default function Landing() {
     <div className="flex min-h-dvh flex-col bg-[#0b0b0b] text-[#f2f2f2]">
       <header className="flex flex-wrap items-baseline justify-between gap-2 px-4 py-4 sm:px-6">
         <p className="text-sm font-medium tracking-wide">
-          Rial Rent <span className="text-white/50">· {t('brand.claim')}</span>
+          {t('brand.name')} <span className="text-white/50">· {t('brand.claim')}</span>
         </p>
         <h1 className="text-sm text-white/80">{t('landing.line')}</h1>
       </header>

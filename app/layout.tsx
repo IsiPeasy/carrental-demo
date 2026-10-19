@@ -6,7 +6,7 @@ import { themeCSS } from '@/lib/theme-tokens';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Rial Rent — demo · cinque stili',
+  title: 'GRANDTOUR — demo · cinque stili',
   description: 'European Luxury Mobility Concierge — demo di design multi-tema.',
   robots: { index: false, follow: false },
 };

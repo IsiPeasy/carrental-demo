@@ -7,7 +7,8 @@ import { marque } from './themes/marque';
 
 const en: Dict = {
   brand: {
-    name: 'Rial Rent',
+    name: 'GRANDTOUR',
+    monogram: 'GT',
     claim: 'European Luxury Mobility Concierge',
   },
   nav: {
@@ -220,7 +221,7 @@ const en: Dict = {
     preview: 'Message preview',
     send: 'Send to the concierge',
     open: 'Open WhatsApp',
-    hello: 'Hello Rial Rent, I would like to request:',
+    hello: 'Hello GRANDTOUR, I would like to request:',
     car: 'Car',
     city: 'Delivery',
     returnAt: 'Return',
@@ -235,7 +236,7 @@ const en: Dict = {
   },
   footer: {
     disclaimer: 'Design demo · indicative content and prices',
-    trademarks: 'Trademarks belong to their respective owners. Rial Rent is not affiliated with the manufacturers.',
+    trademarks: 'Trademarks belong to their respective owners. GRANDTOUR is not affiliated with the manufacturers.',
   },
   landing: {
     line: 'Same logic, five skins. Choose yours.',

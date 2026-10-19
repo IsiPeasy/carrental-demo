@@ -1,6 +1,7 @@
 # CLAUDE.md — carrent-demo
 
-Multi-theme design demo for **Rial Rent** (rialrent.it): one site, five styles. Same data, same pricing, same store; each style changes skin, typography, motion and one or two signature interactions. Full brief: `BRIEF.md` (IT).
+Multi-theme design demo for **Rial Rent** (rialrent.it): one site, five styles.
+**Displayed brand = GRANDTOUR** (demo name, monogram "GT"), only via `t('brand.name')` / `t('brand.monogram')` — never hard-code it. Company data (RIAL S.R.L., P.IVA, contacts, WhatsApp number) stays real. Same data, same pricing, same store; each style changes skin, typography, motion and one or two signature interactions. Full brief: `BRIEF.md` (IT).
 
 ## Stack (non-negotiable)
 - Next.js 15 App Router, TypeScript strict, `output: 'export'`, `trailingSlash: true`, `images.unoptimized: true`

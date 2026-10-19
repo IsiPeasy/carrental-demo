@@ -1,6 +1,7 @@
-# Rial Rent — un sito, cinque stili
+# GRANDTOUR — un sito, cinque stili
 
 Demo di design per **Rial Rent** (rialrent.it · European Luxury Mobility Concierge).
+Nel sito il marchio mostrato è **GRANDTOUR** (nome demo, monogramma "GT"): si cambia in un punto solo, `brand.name` / `brand.monogram` in `lib/i18n/{it,en}.ts`. Contatti, dati societari e link WhatsApp restano quelli reali del cliente.
 Lo stesso sito (home, flotta, Trip Builder a 5 step, riepilogo → WhatsApp) è applicato con **cinque stili diversi**: stessi dati, stessa logica, stessa stima di prezzo. Cambiano pelle, tipografia, motion e una o due interazioni firma per stile. Il cliente sceglie una direzione.
 
 > Demo di design · contenuti e prezzi indicativi.
@@ -64,7 +65,7 @@ Oggi ogni foto è un segnaposto elegante con didascalia reale e la scritta `[fot
 ### Loghi ufficiali (solo stile Marque, `public/brands/`)
 I loghi non sono disegnati né ricostruiti nel codice. Se il file manca, Marque mostra il nome della marca composto in tipografia: la demo funziona anche senza.
 `ferrari.svg`, `lamborghini.svg`, `porsche.svg`, `mercedes-amg.svg`, `mercedes-benz.svg`, `land-rover.svg`, `abarth.svg`.
-Uso solo nominativo: "I marchi appartengono ai rispettivi proprietari. Rial Rent non è affiliata ai costruttori."
+Uso solo nominativo: "I marchi appartengono ai rispettivi proprietari. GRANDTOUR non è affiliata ai costruttori."
 
 ### Dati mancanti (oggi `[…]`)
 - Specifiche di Portofino M, Urus, G63, Range Rover Sport SV, Defender 110, GLE 63 S, SL 43, V-Class, Abarth 695, A45 S (anno, motore, potenza)

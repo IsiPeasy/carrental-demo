@@ -10,7 +10,8 @@ import { marque } from './themes/marque';
 
 const it = {
   brand: {
-    name: 'Rial Rent',
+    name: 'GRANDTOUR',
+    monogram: 'GT',
     claim: 'European Luxury Mobility Concierge',
   },
   nav: {
@@ -223,7 +224,7 @@ const it = {
     preview: 'Anteprima del messaggio',
     send: 'Invia al concierge',
     open: 'Apri WhatsApp',
-    hello: 'Buongiorno Rial Rent, vorrei richiedere:',
+    hello: 'Buongiorno GRANDTOUR, vorrei richiedere:',
     car: 'Vettura',
     city: 'Consegna',
     returnAt: 'Riconsegna',
@@ -238,7 +239,7 @@ const it = {
   },
   footer: {
     disclaimer: 'Demo di design · contenuti e prezzi indicativi',
-    trademarks: 'I marchi appartengono ai rispettivi proprietari. Rial Rent non è affiliata ai costruttori.',
+    trademarks: 'I marchi appartengono ai rispettivi proprietari. GRANDTOUR non è affiliata ai costruttori.',
   },
   landing: {
     line: 'Stessa logica, cinque pelli. Scegli la tua.',
