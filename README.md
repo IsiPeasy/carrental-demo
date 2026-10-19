@@ -19,9 +19,9 @@ QA visivo (screenshot di tutte le pagine a 1440×900 e 390×844, controllo overf
 
 ```bash
 npm run build
-(cd out && python3 -m http.server 4321) &
+(cd out && python3 -m http.server 4321) &   # riavvialo dopo ogni build: il build ricrea out/
 npx playwright install chromium   # solo la prima volta
-npm run qa                         # → qa/screenshots/ + report.json
+BASE=http://localhost:4321 npm run qa   # → qa/screenshots/ + report.json
 ```
 
 ## Pagine
@@ -39,7 +39,16 @@ Lo switcher in basso a destra cambia stile mantenendo pagina, step e scelte, pi�
 
 ## Stili
 
-_(completato a fine progetto)_
+| # | Stile | Per chi | Interazioni firma | File |
+|---|---|---|---|---|
+| 1 | **Nocturne** `/nocturne` | UHNW, imprenditori, discrezione | Hero "The Unveil": auto 3D su palco nero, spotlight che si accende, vernice che cambia (Rosso → Blu Tour de France → Giallo Cartagena) · CarStep turntable 3D · riepilogo "invitation card" con monogramma | `components/themes/nocturne/` |
+| 2 | **Riviera** `/riviera` | Luxury traveler, wedding, charter guest | Hero "Carte postale": rotta Milano → Portofino → Montecarlo → Saint-Tropez che si disegna, GT che la segue, francobolli · DestinationStep a cartoline che si girano · riepilogo lettera con ceralacca, stampabile | `components/themes/riviera/` |
+| 3 | **Grand Prix** `/grand-prix` | Appassionati, social, eventi | Poster con numero di gara e strisce · tabellone split-flap DEPARTURES · CarStep 3D su pavimento a scacchi · calendario cronometro in "giri" · pass paddock con codice a barre | `components/themes/grand-prix/` |
+| 4 | **Itinerary** `/itinerary` | Executive, agenzie, assistenti | Mappa d'Europa live con archi da Milano · timeline "Orchestrazione" · builder come chat col concierge + card itinerario live · mockup telefono col messaggio WhatsApp | `components/themes/itinerary/` |
+| 5 | **Marque** `/marque` | Chi sceglie prima la marca | Brand wall · accent che cambia per marca su tutto il sito · CarStep marca → modello con 3D tinto dal brand · scheda "configurazione" da configuratore ufficiale | `components/themes/marque/` |
+
+Tutti condividono `lib/data.ts`, `lib/pricing.ts`, `lib/store.ts`, `lib/whatsapp.ts`, `components/CarSilhouette.tsx`, `components/Car3D.tsx`.
+Il 3D è in primo piano solo in Nocturne (hero + step auto), Grand Prix e Marque (step auto). Riviera e Itinerary usano le silhouette SVG.
 
 ## Cosa deve fornire il cliente
 
@@ -79,6 +88,12 @@ Export statico (`output: 'export'`):
 1. Importa il repo su Vercel: framework **Next.js** viene rilevato automaticamente; il build produce `out/`.
 2. Oppure da CLI: `npx vercel` (poi `npx vercel --prod`).
 Nessuna variabile d'ambiente richiesta.
+
+## Cose da sapere
+- Le tariffe sono demo (tranne l'ingresso "da circa €1.200/giorno") e si possono cambiare da `/{stile}/admin/`: restano solo nel browser di chi le modifica.
+- Il link WhatsApp porta al numero reale del cliente (+39 320 293 4909) con il messaggio precompilato.
+- Con "riduci movimento" attivo nel sistema operativo il 3D è sostituito dalla silhouette statica e le animazioni si fermano sullo stato finale.
+- In VS Code: "Run and Debug" → *Rial Rent: build + preview export* mostra il sito come su Vercel.
 
 ## Note tecniche
 Vedi `CLAUDE.md` (stack, regole, registry temi). Geodati: Natural Earth 1:50m (pubblico dominio), ritagliati con `scripts/crop-geo.mjs`.
