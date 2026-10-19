@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/brands-manifest.mjs",
     "build": "next build",
     "start": "npx serve out",
     "lint": "tsc --noEmit",
