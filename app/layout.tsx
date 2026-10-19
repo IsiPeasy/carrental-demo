@@ -17,6 +17,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="it" className={fontVariables} suppressHydrationWarning>
       <head>
+        {/* no favicon: an explicit empty icon stops browsers reusing a cached
+            icon from other projects served on the same localhost port */}
+        <link rel="icon" href="data:," />
         {/* theme tokens generated from the registry (lib/theme-tokens.ts) */}
         <style dangerouslySetInnerHTML={{ __html: themeCSS() }} />
       </head>
