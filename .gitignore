@@ -1,5 +1,5 @@
-# deps
-node_modules/
+# deps (no trailing slash: also matches the symlink in agent worktrees)
+node_modules
 # next / export
 .next/
 out/

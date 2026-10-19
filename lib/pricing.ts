@@ -252,5 +252,7 @@ export function formatEUR(n: number, locale: 'it' | 'en' = 'it'): string {
     style: 'currency',
     currency: CURRENCY,
     maximumFractionDigits: 0,
-  }).format(n);
+    // it-IT omits the separator for 4-digit numbers ("3600 €"); keep "3.600 €"
+    useGrouping: 'always',
+  } as Intl.NumberFormatOptions).format(n);
 }
