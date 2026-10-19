@@ -1,1 +1,464 @@
 /* marque — every rule scoped under [data-theme="marque"]; keyframes prefixed "marque-". */
+
+/* Defaults outside any brand scope (BrandScope overrides these inline). */
+[data-theme='marque'] {
+  --m-on: #ffffff;
+  --m-ink: #0b0b0b;
+  --m-tr: color 0.5s var(--ease), background-color 0.5s var(--ease), border-color 0.5s var(--ease),
+    fill 0.5s var(--ease), stroke 0.5s var(--ease), outline-color 0.5s var(--ease), box-shadow 0.5s var(--ease);
+}
+
+/* Focus ring in the AA-safe brand ink (gold fills are too light for a ring). */
+[data-theme='marque'] :focus-visible {
+  outline: 2px solid var(--m-ink);
+  outline-offset: 3px;
+}
+[data-theme='marque'] ::selection {
+  background: var(--color-accent);
+  color: var(--m-on);
+}
+
+/* ——— type ——— */
+[data-theme='marque'] .m-display {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 0.98;
+}
+[data-theme='marque'] .m-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+}
+[data-theme='marque'] .m-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-ink-2);
+}
+[data-theme='marque'] .m-mono {
+  font-family: var(--font-mono);
+}
+
+/* ——— accent utilities (colour transitions .5s) ——— */
+[data-theme='marque'] .m-tr {
+  transition: var(--m-tr);
+}
+[data-theme='marque'] .m-acc-text {
+  color: var(--m-ink);
+  transition: var(--m-tr);
+}
+[data-theme='marque'] .m-acc-bg {
+  background-color: var(--color-accent);
+  color: var(--m-on);
+  transition: var(--m-tr);
+}
+[data-theme='marque'] .m-acc-border {
+  border-color: var(--color-accent);
+  transition: var(--m-tr);
+}
+
+/* buttons */
+[data-theme='marque'] .m-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  min-height: 2.75rem;
+  padding: 0.7rem 1.4rem;
+  border-radius: var(--radius);
+  background-color: var(--color-accent);
+  color: var(--m-on);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.92rem;
+  letter-spacing: -0.005em;
+  transition: var(--m-tr), transform 0.3s var(--ease), opacity 0.3s var(--ease);
+}
+[data-theme='marque'] .m-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+[data-theme='marque'] .m-btn:disabled {
+  opacity: 0.35;
+}
+[data-theme='marque'] .m-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  min-height: 2.75rem;
+  padding: 0.7rem 1.4rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-ink);
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.92rem;
+  transition: var(--m-tr);
+}
+[data-theme='marque'] .m-btn-ghost:hover:not(:disabled) {
+  background: var(--color-ink);
+  color: var(--color-bg);
+}
+[data-theme='marque'] .m-btn-ghost:disabled {
+  opacity: 0.3;
+}
+[data-theme='marque'] .m-link {
+  color: var(--m-ink);
+  font-weight: 600;
+  text-underline-offset: 4px;
+  transition: var(--m-tr);
+}
+[data-theme='marque'] .m-link:hover {
+  text-decoration: underline;
+}
+
+/* option (radio/checkbox/chip) */
+[data-theme='marque'] .m-opt {
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  background: var(--color-bg);
+  transition: var(--m-tr), transform 0.3s var(--ease);
+}
+[data-theme='marque'] .m-opt:hover {
+  border-color: var(--color-ink-2);
+}
+[data-theme='marque'] .m-opt[aria-checked='true'],
+[data-theme='marque'] .m-opt[aria-pressed='true'],
+[data-theme='marque'] .m-opt[aria-selected='true'],
+[data-theme='marque'] .m-opt.is-on {
+  border-color: var(--color-accent);
+  box-shadow: inset 0 0 0 1px var(--color-accent);
+}
+[data-theme='marque'] .m-chip[aria-checked='true'],
+[data-theme='marque'] .m-chip[aria-pressed='true'] {
+  background-color: var(--color-accent);
+  color: var(--m-on);
+}
+
+/* ——— BrandMark ——— */
+[data-theme='marque'] .m-wordmark {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  line-height: 0.9;
+  white-space: nowrap;
+}
+[data-theme='marque'] .m-fitbox {
+  display: block;
+  width: 100%;
+  container-type: inline-size;
+}
+[data-theme='marque'] .m-wordmark-fit {
+  display: block;
+  font-size: min(calc(100cqi / (var(--m-n) * 0.66)), var(--m-max, 4.5rem));
+}
+[data-theme='marque'] .m-mark-img {
+  display: block;
+  height: var(--m-h, 2rem);
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+[data-theme='marque'] .m-mark-img.m-mark-fit {
+  height: auto;
+  width: 100%;
+  max-height: var(--m-max, 4.5rem);
+}
+[data-theme='marque'] .m-mark-mono {
+  filter: grayscale(1) contrast(1.2);
+  opacity: 0.75;
+}
+[data-theme='marque'] .m-mono-text {
+  color: var(--color-ink-2);
+}
+
+/* ——— Hero: brand wall ——— */
+[data-theme='marque'] .m-wall {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+}
+[data-theme='marque'] .m-wall-row {
+  display: contents;
+}
+[data-theme='marque'] .m-tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  aspect-ratio: 1 / 1.08;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  color: var(--color-ink);
+  isolation: isolate;
+  transition: var(--m-tr), flex-grow 0.6s var(--ease);
+}
+[data-theme='marque'] .m-tile-bar {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: var(--color-accent);
+  transition: var(--m-tr), height 0.45s var(--ease);
+}
+[data-theme='marque'] .m-tile-head {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.85rem 0.85rem 0;
+}
+[data-theme='marque'] .m-tile-mark {
+  position: relative;
+  padding: 1.1rem 0.85rem 0;
+  --m-max: 2.4rem;
+  transition: var(--m-tr), transform 0.6s var(--ease);
+}
+[data-theme='marque'] .m-tile .m-tile-car {
+  position: absolute;
+  inset: auto 6% 12% 6%;
+  transition: opacity 0.5s var(--ease), transform 0.6s var(--ease);
+}
+[data-theme='marque'] .m-tile-cta {
+  position: absolute;
+  left: 0.85rem;
+  bottom: 0.7rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: var(--m-ink);
+  transition: var(--m-tr), opacity 0.4s var(--ease), transform 0.5s var(--ease);
+}
+[data-theme='marque'] .m-tile-all {
+  background: var(--color-ink);
+  color: var(--color-bg);
+}
+[data-theme='marque'] .m-tile-all .m-kicker {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@media (min-width: 48rem) {
+  [data-theme='marque'] .m-wall {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  [data-theme='marque'] .m-wall-row {
+    display: flex;
+    gap: 8px;
+    height: clamp(240px, 31vh, 330px);
+  }
+  [data-theme='marque'] .m-tile {
+    flex: 1 1 0;
+    aspect-ratio: auto;
+  }
+  [data-theme='marque'] .m-tile-head {
+    padding: 1.2rem 1.4rem 0;
+  }
+  [data-theme='marque'] .m-tile-mark {
+    position: absolute;
+    inset: 50% 1.6rem auto 1.6rem;
+    padding: 0;
+    transform: translateY(-50%);
+    --m-max: 4.6rem;
+  }
+  [data-theme='marque'] .m-tile .m-tile-car {
+    inset: auto 10% 9% 10%;
+    opacity: 0;
+    transform: translateY(18px) scale(0.96);
+  }
+  [data-theme='marque'] .m-tile-cta {
+    left: 1.4rem;
+    bottom: 1.1rem;
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+  [data-theme='marque'] .m-tile-count {
+    opacity: 0.0;
+    transition: opacity 0.4s var(--ease);
+  }
+  /* expand on hover AND keyboard focus */
+  [data-theme='marque'] .m-tile:hover,
+  [data-theme='marque'] .m-tile:focus-visible {
+    flex-grow: 1.9;
+    background: var(--color-bg);
+    box-shadow: inset 0 0 0 1px var(--color-line);
+  }
+  [data-theme='marque'] .m-tile:focus-visible {
+    outline-offset: -3px;
+  }
+  [data-theme='marque'] .m-tile:hover .m-tile-bar,
+  [data-theme='marque'] .m-tile:focus-visible .m-tile-bar {
+    height: 6px;
+  }
+  [data-theme='marque'] .m-tile:hover .m-tile-mark,
+  [data-theme='marque'] .m-tile:focus-visible .m-tile-mark {
+    color: var(--m-ink);
+    transform: translateY(-160%) scale(0.86);
+  }
+  [data-theme='marque'] .m-tile:hover .m-tile-car,
+  [data-theme='marque'] .m-tile:focus-visible .m-tile-car,
+  [data-theme='marque'] .m-tile:hover .m-tile-cta,
+  [data-theme='marque'] .m-tile:focus-visible .m-tile-cta,
+  [data-theme='marque'] .m-tile:hover .m-tile-count,
+  [data-theme='marque'] .m-tile:focus-visible .m-tile-count {
+    opacity: 1;
+    transform: none;
+  }
+  [data-theme='marque'] .m-tile-all:hover,
+  [data-theme='marque'] .m-tile-all:focus-visible {
+    background: var(--color-ink);
+  }
+}
+
+/* reflective floor under silhouettes */
+[data-theme='marque'] .m-floor::after {
+  content: '';
+  position: absolute;
+  left: 4%;
+  right: 4%;
+  bottom: -6%;
+  height: 14%;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.12), transparent 70%);
+  pointer-events: none;
+}
+
+/* ——— marquee ——— */
+[data-theme='marque'] .m-marquee {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+[data-theme='marque'] .m-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marque-scroll 60s linear infinite;
+}
+[data-theme='marque'] .m-marquee:hover .m-marquee-track,
+[data-theme='marque'] .m-marquee:focus-within .m-marquee-track,
+[data-theme='marque'] .m-marquee.is-paused .m-marquee-track {
+  animation-play-state: paused;
+}
+@keyframes marque-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ——— tabs (brand section) ——— */
+[data-theme='marque'] .m-tab {
+  position: relative;
+  color: var(--color-ink-2);
+  transition: var(--m-tr);
+}
+[data-theme='marque'] .m-tab::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 3px;
+  background: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.45s var(--ease), background-color 0.5s var(--ease);
+}
+[data-theme='marque'] .m-tab:hover {
+  color: var(--color-ink);
+}
+[data-theme='marque'] .m-tab[aria-selected='true'],
+[data-theme='marque'] .m-tab[aria-current='step'] {
+  color: var(--color-ink);
+}
+[data-theme='marque'] .m-tab[aria-selected='true']::after,
+[data-theme='marque'] .m-tab[aria-current='step']::after {
+  transform: scaleX(1);
+}
+
+/* panel enter */
+[data-theme='marque'] .m-enter {
+  animation: marque-enter 0.5s var(--ease) both;
+}
+@keyframes marque-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* spec table */
+[data-theme='marque'] .m-spec {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+[data-theme='marque'] .m-spec th,
+[data-theme='marque'] .m-spec td {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--color-line);
+  text-align: left;
+  vertical-align: top;
+}
+[data-theme='marque'] .m-spec th {
+  width: 40%;
+  font-weight: 400;
+  color: var(--color-ink-2);
+  padding-right: 1rem;
+}
+[data-theme='marque'] .m-spec td {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
+/* FAQ */
+[data-theme='marque'] .m-faq summary::-webkit-details-marker {
+  display: none;
+}
+[data-theme='marque'] .m-faq .m-plus {
+  transition: transform 0.35s var(--ease);
+}
+[data-theme='marque'] .m-faq[open] .m-plus {
+  transform: rotate(45deg);
+}
+
+/* calendar */
+[data-theme='marque'] .m-day {
+  border-radius: var(--radius);
+  transition: var(--m-tr);
+}
+[data-theme='marque'] .m-day[data-st='edge'] {
+  background: var(--color-accent);
+  color: var(--m-on);
+  font-weight: 600;
+}
+[data-theme='marque'] .m-day[data-st='in'] {
+  background: color-mix(in oklab, var(--color-accent) 14%, var(--color-bg));
+}
+[data-theme='marque'] .m-day[data-st='free']:hover {
+  background: var(--color-surface);
+}
+
+/* door */
+[data-theme='marque'] .m-door-word {
+  transition: opacity 0.5s var(--ease), transform 0.6s var(--ease), color 0.5s var(--ease);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-theme='marque'] .m-marquee-track {
+    animation: none;
+  }
+  [data-theme='marque'] .m-enter {
+    animation: none;
+  }
+}
