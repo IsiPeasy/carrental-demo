@@ -16,6 +16,8 @@ export interface ThemeTokens {
     accent: string;
     accent2: string;
     line: string;
+    /** text/icons on an accent fill (AA ≥ 4.5:1) */
+    onAccent: string;
   };
   fonts: { display: string; body: string; mono: string };
   radius: string;
@@ -39,7 +41,7 @@ export const THEME_META: Record<StyleId, ThemeMeta> = {
     tagline: { it: 'Private members club, il 3D in vetrina.', en: 'Private members club, 3D in the spotlight.' },
     audience: { it: 'UHNW, imprenditori, chi vuole discrezione.', en: 'UHNW clients, entrepreneurs, those who value discretion.' },
     tokens: {
-      colors: { bg: '#0A0A0B', surface: '#141415', ink: '#F3EFE6', ink2: '#A8A39A', accent: '#C8A96A', accent2: '#6E6A62', line: '#26241F' },
+      colors: { bg: '#0A0A0B', surface: '#141415', ink: '#F3EFE6', ink2: '#A8A39A', accent: '#C8A96A', accent2: '#6E6A62', line: '#26241F', onAccent: '#0A0A0B' },
       fonts: { display: "var(--f-bodoni), 'Bodoni Moda', Didot, serif", body: "var(--f-inter-tight), 'Inter Tight', system-ui, sans-serif", mono: "var(--f-inter-tight), ui-monospace, monospace" },
       radius: '0px',
       motion: { ease: 'cubic-bezier(.2,.8,.2,1)', fast: '0.8s', base: '1.2s', slow: '1.6s' },
@@ -52,7 +54,7 @@ export const THEME_META: Record<StyleId, ThemeMeta> = {
     tagline: { it: 'Old money mediterraneo, editoriale.', en: 'Mediterranean old money, editorial.' },
     audience: { it: 'Luxury traveler, wedding, charter guest.', en: 'Luxury travelers, weddings, charter guests.' },
     tokens: {
-      colors: { bg: '#F5EFE4', surface: '#FBF8F2', ink: '#13233F', ink2: '#5A6478', accent: '#1E4E79', accent2: '#C96F4A', line: '#E2D8C6' },
+      colors: { bg: '#F5EFE4', surface: '#FBF8F2', ink: '#13233F', ink2: '#5A6478', accent: '#1E4E79', accent2: '#C96F4A', line: '#E2D8C6', onAccent: '#FBF8F2' },
       fonts: { display: "var(--f-fraunces), Fraunces, Georgia, serif", body: "var(--f-dm-sans), 'DM Sans', system-ui, sans-serif", mono: "var(--f-dm-sans), ui-monospace, monospace" },
       radius: '2px',
       motion: { ease: 'cubic-bezier(.33,0,.2,1)', fast: '0.6s', base: '0.9s', slow: '1.2s' },
@@ -65,7 +67,7 @@ export const THEME_META: Record<StyleId, ThemeMeta> = {
     tagline: { it: 'Poster anni ’70, il 3D in pista.', en: '’70s race poster, 3D on the track.' },
     audience: { it: 'Appassionati, social, eventi.', en: 'Enthusiasts, social, events.' },
     tokens: {
-      colors: { bg: '#EFE7D6', surface: '#F8F2E4', ink: '#111111', ink2: '#4A4A46', accent: '#D7261E', accent2: '#0F4C81', line: '#111111' },
+      colors: { bg: '#EFE7D6', surface: '#F8F2E4', ink: '#111111', ink2: '#4A4A46', accent: '#D7261E', accent2: '#0F4C81', line: '#111111', onAccent: '#FFFFFF' },
       fonts: { display: "var(--f-anton), Anton, Impact, sans-serif", body: "var(--f-archivo), Archivo, system-ui, sans-serif", mono: "var(--f-space-mono), 'Space Mono', ui-monospace, monospace" },
       radius: '0px',
       motion: { ease: 'cubic-bezier(.5,0,.2,1)', fast: '0.25s', base: '0.35s', slow: '0.5s' },
@@ -78,7 +80,7 @@ export const THEME_META: Record<StyleId, ThemeMeta> = {
     tagline: { it: 'Concierge OS svizzero, la mappa al centro.', en: 'Swiss concierge OS, the map at the centre.' },
     audience: { it: 'Executive, agenzie, assistenti personali.', en: 'Executives, agencies, personal assistants.' },
     tokens: {
-      colors: { bg: '#F6F6F4', surface: '#FFFFFF', ink: '#0B0B0C', ink2: '#6B6B6B', accent: '#0E6B57', accent2: '#FF5A36', line: '#E4E4E0' },
+      colors: { bg: '#F6F6F4', surface: '#FFFFFF', ink: '#0B0B0C', ink2: '#6B6B6B', accent: '#0E6B57', accent2: '#FF5A36', line: '#E4E4E0', onAccent: '#FFFFFF' },
       fonts: { display: "var(--f-geist), Geist, system-ui, sans-serif", body: "var(--f-geist), Geist, system-ui, sans-serif", mono: "var(--f-geist-mono), 'Geist Mono', ui-monospace, monospace" },
       radius: '12px',
       motion: { ease: 'cubic-bezier(0,0,.2,1)', fast: '0.2s', base: '0.3s', slow: '0.4s' },
@@ -91,7 +93,7 @@ export const THEME_META: Record<StyleId, ThemeMeta> = {
     tagline: { it: 'Il brand come protagonista.', en: 'The brand takes the lead.' },
     audience: { it: 'Chi sceglie prima la marca, poi la vettura.', en: 'Those who choose the marque first, then the car.' },
     tokens: {
-      colors: { bg: '#FFFFFF', surface: '#F4F4F4', ink: '#0B0B0B', ink2: '#6A6A6A', accent: '#0B0B0B', accent2: '#6A6A6A', line: '#E6E6E6' },
+      colors: { bg: '#FFFFFF', surface: '#F4F4F4', ink: '#0B0B0B', ink2: '#6A6A6A', accent: '#0B0B0B', accent2: '#6A6A6A', line: '#E6E6E6', onAccent: '#FFFFFF' },
       fonts: { display: "var(--f-inter-tight), 'Inter Tight', system-ui, sans-serif", body: "var(--f-inter), Inter, system-ui, sans-serif", mono: "var(--f-jetbrains), 'JetBrains Mono', ui-monospace, monospace" },
       radius: '4px',
       motion: { ease: 'cubic-bezier(.25,.1,.25,1)', fast: '0.3s', base: '0.45s', slow: '0.6s' },
@@ -112,6 +114,7 @@ export function tokenVars(t: ThemeTokens): Record<string, string> {
     '--color-accent': t.colors.accent,
     '--color-accent-2': t.colors.accent2,
     '--color-line': t.colors.line,
+    '--color-on-accent': t.colors.onAccent,
     '--font-display': t.fonts.display,
     '--font-body': t.fonts.body,
     '--font-mono': t.fonts.mono,

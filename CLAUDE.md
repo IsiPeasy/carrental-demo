@@ -57,12 +57,14 @@ components/
 - A theme folder imports only from `lib/*`, `components/*.tsx` (shared) and its own folder. Never from another theme folder.
 
 ## CSS theming
-- Semantic variables: `--color-bg --color-surface --color-ink --color-ink-2 --color-accent --color-accent-2 --color-line --font-display --font-body --font-mono --radius`, plus motion `--ease --dur-fast --dur --dur-slow`.
+- Semantic variables: `--color-bg --color-surface --color-ink --color-ink-2 --color-accent --color-accent-2 --color-line --color-on-accent --font-display --font-body --font-mono --radius`, plus motion `--ease --dur-fast --dur --dur-slow`.
 - Defaults (Nocturne) live in `@theme` in `globals.css`. The other themes' overrides are **generated from the registry tokens** (`lib/theme-tokens.ts`) into a `<style>` tag in the root layout as `[data-theme="<id>"]{…}`. So tokens have one source of truth (TS), with the Nocturne defaults mirrored in `@theme` so Tailwind generates the utilities.
-- Utilities that always resolve to the active theme: `bg-bg bg-surface text-ink text-ink-2 text-accent bg-accent text-accent-2 border-line font-display font-body font-mono rounded-theme ease-theme`.
+- Utilities that always resolve to the active theme: `bg-bg bg-surface text-ink text-ink-2 text-accent bg-accent text-on-accent text-accent-2 border-line font-display font-body font-mono rounded-theme ease-theme`.
 - `data-theme` can be set on any element (the landing doors each set their own), not only `<html>`. `ThemeProvider` sets it on `<html>` for `/[style]/*`.
 - Theme-specific CSS: `components/themes/<id>/styles.css`, imported by `globals.css`, **every rule scoped under `[data-theme="<id>"]`**. Keyframes prefixed with the theme id.
 - Every animation must be disabled/reduced under `@media (prefers-reduced-motion: reduce)` (global safety net in globals.css + local handling for JS animations via `usePrefersReducedMotion()`).
+
+- Text on an accent fill: always `text-on-accent` (never `text-bg`) — AA on every theme.
 
 ## i18n
 - IT default, EN complete. Dictionaries: `lib/i18n/it.ts` (defines the `Dict` type), `lib/i18n/en.ts` (`satisfies Dict`). Theme-only strings: `lib/i18n/themes/<id>.ts` exporting `{ it, en }`, mounted under `th.<id>`.

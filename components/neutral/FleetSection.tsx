@@ -32,7 +32,7 @@ export function FilterChips<T extends string>({
           aria-pressed={value === o.value}
           onClick={() => onChange(o.value)}
           className={`rounded-theme border px-3 py-1.5 text-sm transition-colors ${
-            value === o.value ? 'border-accent bg-accent text-bg' : 'border-line hover:border-ink-2'
+            value === o.value ? 'border-accent bg-accent text-on-accent' : 'border-line hover:border-ink-2'
           }`}
         >
           {o.label}

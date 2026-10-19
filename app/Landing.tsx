@@ -48,7 +48,7 @@ export default function Landing() {
                 </p>
                 <Link
                   href={`/${id}/`}
-                  className="mt-5 inline-flex items-center gap-2 rounded-theme bg-accent px-5 py-2.5 text-sm font-medium text-bg transition-transform hover:translate-x-0.5"
+                  className="mt-5 inline-flex items-center gap-2 rounded-theme bg-accent px-5 py-2.5 text-sm font-medium text-on-accent transition-transform hover:translate-x-0.5"
                 >
                   {t('landing.enter')} <span aria-hidden>→</span>
                   <span className="sr-only"> {th.name}</span>

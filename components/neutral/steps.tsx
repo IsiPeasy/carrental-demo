@@ -94,7 +94,7 @@ export function CityList({ value, onChange, label }: { value: string | null; onC
             role="radio"
             aria-checked={value === c.id}
             onClick={() => onChange(c.id)}
-            className={`rounded-theme border px-3 py-1.5 text-sm ${value === c.id ? 'border-accent bg-accent text-bg' : 'border-line hover:border-ink-2'}`}
+            className={`rounded-theme border px-3 py-1.5 text-sm ${value === c.id ? 'border-accent bg-accent text-on-accent' : 'border-line hover:border-ink-2'}`}
           >
             {t.l(c.name)} <span className="font-mono text-[10px] opacity-70">{c.code}</span>
           </button>
@@ -122,7 +122,7 @@ export function DestinationStep(_: StepProps) {
               type="button"
               aria-pressed={deliveryType === d}
               onClick={() => setDeliveryType(d)}
-              className={`rounded-theme border px-3 py-1.5 text-sm ${deliveryType === d ? 'border-accent bg-accent text-bg' : 'border-line hover:border-ink-2'}`}
+              className={`rounded-theme border px-3 py-1.5 text-sm ${deliveryType === d ? 'border-accent bg-accent text-on-accent' : 'border-line hover:border-ink-2'}`}
             >
               {t(`deliveryTypes.${d}`)}
             </button>
@@ -132,10 +132,10 @@ export function DestinationStep(_: StepProps) {
       <fieldset>
         <legend className="label-caps text-ink-2">{t('builder.destination.return')}</legend>
         <div className="mt-2 flex gap-2">
-          <button type="button" aria-pressed={!returnCityId} onClick={() => setReturnCity(null)} className={`rounded-theme border px-3 py-1.5 text-sm ${!returnCityId ? 'border-accent bg-accent text-bg' : 'border-line'}`}>
+          <button type="button" aria-pressed={!returnCityId} onClick={() => setReturnCity(null)} className={`rounded-theme border px-3 py-1.5 text-sm ${!returnCityId ? 'border-accent bg-accent text-on-accent' : 'border-line'}`}>
             {t('builder.destination.returnSame')}
           </button>
-          <button type="button" aria-pressed={!!returnCityId} disabled={!cityId} onClick={() => setReturnCity(returnCityId ?? (cityId === 'milano' ? 'roma' : 'milano'))} className={`rounded-theme border px-3 py-1.5 text-sm disabled:opacity-40 ${returnCityId ? 'border-accent bg-accent text-bg' : 'border-line'}`}>
+          <button type="button" aria-pressed={!!returnCityId} disabled={!cityId} onClick={() => setReturnCity(returnCityId ?? (cityId === 'milano' ? 'roma' : 'milano'))} className={`rounded-theme border px-3 py-1.5 text-sm disabled:opacity-40 ${returnCityId ? 'border-accent bg-accent text-on-accent' : 'border-line'}`}>
             {t('builder.destination.returnOther')}
           </button>
         </div>
@@ -183,7 +183,7 @@ export function DatesStep(_: StepProps) {
                 aria-label={formatDate(iso, t.locale)}
                 onClick={() => cal.pick(iso)}
                 className={`rounded-theme py-2 tabular-nums disabled:opacity-25 ${
-                  st === 'edge' ? 'bg-accent text-bg' : st === 'in' ? 'bg-accent/20' : 'hover:bg-surface'
+                  st === 'edge' ? 'bg-accent text-on-accent' : st === 'in' ? 'bg-accent/20' : 'hover:bg-surface'
                 }`}
               >
                 {Number(iso.slice(8))}

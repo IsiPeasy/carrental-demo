@@ -21,6 +21,7 @@
   --color-accent: #c8a96a;
   --color-accent-2: #6e6a62;
   --color-line: #26241f;
+  --color-on-accent: #0a0a0b;
 
   --font-display: var(--f-bodoni), 'Bodoni Moda', Didot, serif;
   --font-body: var(--f-inter-tight), 'Inter Tight', system-ui, sans-serif;
@@ -62,7 +63,7 @@
   }
   ::selection {
     background: var(--color-accent);
-    color: var(--color-bg);
+    color: var(--color-on-accent);
   }
   button:not(:disabled),
   [role='button']:not([aria-disabled='true']) {

@@ -56,7 +56,7 @@ export function StepNavButtons({ nav, className = '' }: { nav: BuilderNav; class
         onClick={nav.next}
         disabled={!nav.canNext}
         aria-describedby={nav.reason ? 'next-reason' : undefined}
-        className="rounded-theme bg-accent px-5 py-2 text-bg disabled:opacity-40"
+        className="rounded-theme bg-accent px-5 py-2 text-on-accent disabled:opacity-40"
       >
         {t('builder.next')} →
       </button>
@@ -99,7 +99,7 @@ export default function BuilderLayout({ nav, children }: BuilderLayoutProps) {
             <p className="font-display text-xl tabular-nums">{money(est.total)}</p>
           </div>
           {nav.step < nav.total - 1 && (
-            <button type="button" onClick={nav.next} disabled={!nav.canNext} className="rounded-theme bg-accent px-4 py-2 text-sm text-bg disabled:opacity-40">
+            <button type="button" onClick={nav.next} disabled={!nav.canNext} className="rounded-theme bg-accent px-4 py-2 text-sm text-on-accent disabled:opacity-40">
               {t('builder.next')} →
             </button>
           )}

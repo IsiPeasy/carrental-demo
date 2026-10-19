@@ -16,7 +16,7 @@ export default function Header() {
   ];
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-bg/90 backdrop-blur">
-      <a href="#main" className="sr-only-focusable absolute left-2 top-2 z-50 bg-accent px-3 py-2 text-bg">
+      <a href="#main" className="sr-only-focusable absolute left-2 top-2 z-50 bg-accent px-3 py-2 text-on-accent">
         {t('nav.skip')}
       </a>
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6">

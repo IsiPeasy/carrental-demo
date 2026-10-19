@@ -43,7 +43,7 @@ export default function WhatsAppPreview({
         rel="noopener noreferrer"
         className={
           buttonClassName ||
-          'mt-4 inline-flex w-full items-center justify-center gap-2 rounded-theme bg-accent px-5 py-3 font-medium text-bg transition-opacity hover:opacity-90'
+          'mt-4 inline-flex w-full items-center justify-center gap-2 rounded-theme bg-accent px-5 py-3 font-medium text-on-accent transition-opacity hover:opacity-90'
         }
       >
         {label ?? t('wa.send')}
