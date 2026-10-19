@@ -19,3 +19,7 @@ playwright-report/
 *.log
 .vscode/*
 !.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/settings.json
+# claude agent worktrees
+.claude/

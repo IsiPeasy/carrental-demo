@@ -1,0 +1,49 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Rial Rent: dev server",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run dev",
+      "cwd": "${workspaceFolder}",
+      "serverReadyAction": {
+        "pattern": "- Local:.+(https?://\\S+)",
+        "uriFormat": "%s",
+        "action": "openExternally"
+      }
+    },
+    {
+      "name": "Rial Rent: dev server + Chrome debug",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run dev",
+      "cwd": "${workspaceFolder}",
+      "serverReadyAction": {
+        "pattern": "- Local:.+(https?://\\S+)",
+        "uriFormat": "%s",
+        "action": "debugWithChrome",
+        "webRoot": "${workspaceFolder}"
+      }
+    },
+    {
+      "name": "Rial Rent: build + preview export (come su Vercel)",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run build && cd out && python3 -m http.server 4321",
+      "cwd": "${workspaceFolder}",
+      "serverReadyAction": {
+        "pattern": "Serving HTTP on .* port (\\d+)",
+        "uriFormat": "http://localhost:%s",
+        "action": "openExternally"
+      }
+    },
+    {
+      "name": "Rial Rent: QA screenshots",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "BASE=http://localhost:4321 npm run qa",
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}

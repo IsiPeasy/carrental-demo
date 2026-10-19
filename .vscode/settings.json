@@ -1,0 +1,24 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "files.exclude": {
+    ".claude/worktrees": true,
+    ".next": true,
+    "out": true,
+    "tsconfig.tsbuildinfo": true,
+    "next-env.d.ts": true
+  },
+  "search.exclude": {
+    ".claude": true,
+    ".next": true,
+    "out": true,
+    "qa/screenshots": true,
+    "public/geo": true
+  },
+  "files.watcherExclude": {
+    "**/.claude/worktrees/**": true,
+    "**/.next/**": true,
+    "**/out/**": true
+  },
+  "files.associations": { "*.css": "tailwindcss" },
+  "editor.quickSuggestions": { "strings": "on" }
+}
