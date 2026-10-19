@@ -1,0 +1,136 @@
+@import 'tailwindcss';
+
+/* Theme-specific CSS — every rule inside is scoped under [data-theme="<id>"]. */
+@import '../components/themes/nocturne/styles.css';
+@import '../components/themes/riviera/styles.css';
+@import '../components/themes/grand-prix/styles.css';
+@import '../components/themes/itinerary/styles.css';
+@import '../components/themes/marque/styles.css';
+
+/*
+ * Semantic tokens. Defaults = Nocturne (mirrors lib/theme-tokens.ts).
+ * The other themes are generated from the registry into a <style> tag in
+ * app/layout.tsx as [data-theme="<id>"]{…}. Utilities read the variables, so
+ * bg-bg / text-ink / font-display … always resolve to the active theme.
+ */
+@theme {
+  --color-bg: #0a0a0b;
+  --color-surface: #141415;
+  --color-ink: #f3efe6;
+  --color-ink-2: #a8a39a;
+  --color-accent: #c8a96a;
+  --color-accent-2: #6e6a62;
+  --color-line: #26241f;
+
+  --font-display: var(--f-bodoni), 'Bodoni Moda', Didot, serif;
+  --font-body: var(--f-inter-tight), 'Inter Tight', system-ui, sans-serif;
+  --font-mono: var(--f-inter-tight), ui-monospace, monospace;
+
+  --radius-theme: var(--radius);
+  --ease-theme: var(--ease);
+
+  --breakpoint-xs: 26rem;
+}
+
+:root {
+  --radius: 0px;
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --dur-fast: 0.8s;
+  --dur: 1.2s;
+  --dur-slow: 1.6s;
+  color-scheme: dark;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    background: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
+  }
+  [data-theme] {
+    color: var(--color-ink);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+  ::selection {
+    background: var(--color-accent);
+    color: var(--color-bg);
+  }
+  button:not(:disabled),
+  [role='button']:not([aria-disabled='true']) {
+    cursor: pointer;
+  }
+  button:disabled {
+    cursor: not-allowed;
+  }
+}
+
+@layer utilities {
+  .duration-theme {
+    transition-duration: var(--dur);
+  }
+  .duration-theme-fast {
+    transition-duration: var(--dur-fast);
+  }
+  .label-caps {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.72rem;
+  }
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .sr-only-focusable:not(:focus) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+}
+
+/* StyleSwitcher position; builder layouts lift it above their mobile bar */
+.switcher {
+  bottom: calc(1rem + var(--switcher-lift, 0px));
+}
+@media (min-width: 64rem) {
+  .switcher {
+    bottom: 1rem;
+  }
+}
+
+/* Landing door expand */
+.door {
+  transition: flex-grow 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Global reduced-motion safety net. JS-driven animations also check
+   usePrefersReducedMotion(). */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}

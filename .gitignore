@@ -1,0 +1,21 @@
+# deps
+node_modules/
+# next / export
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+# vercel
+.vercel/
+# env
+.env*
+!.env.example
+# qa
+qa/screenshots/
+test-results/
+playwright-report/
+# os / editor
+.DS_Store
+*.log
+.vscode/*
+!.vscode/extensions.json
