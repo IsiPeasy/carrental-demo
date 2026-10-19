@@ -283,7 +283,7 @@ function Contacts() {
         </div>
         <dl className="grid gap-px overflow-hidden rounded-theme border border-line bg-line sm:grid-cols-2">
           {[
-            { k: `${t('contacts.whatsapp')} · ${t('contacts.phone')}`, v: CONTACTS.whatsapp, href: `https://wa.me/${CONTACTS.whatsappDigits}` },
+            { k: `${t('contacts.whatsapp')} · ${t('contacts.phone')}`, v: CONTACTS.whatsapp, href: waContactUrl(t.locale) },
             { k: t('contacts.email'), v: CONTACTS.email, href: `mailto:${CONTACTS.email}` },
             { k: t('contacts.address'), v: CONTACTS.address },
             { k: t('contacts.social'), v: `${CONTACTS.social} · ${CONTACTS.socialNetworks.join(' / ')}` },

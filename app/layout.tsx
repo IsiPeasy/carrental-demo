@@ -7,7 +7,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'GRANDTOUR — demo · cinque stili',
-  description: 'European Luxury Mobility Concierge — demo di design multi-tema.',
+  description: 'Grand touring concierge in Europa — demo di design multi-tema.',
   robots: { index: false, follow: false },
 };
 

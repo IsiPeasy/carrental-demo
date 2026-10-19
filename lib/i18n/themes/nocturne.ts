@@ -12,21 +12,21 @@ export const nocturne = defineThemeDict({
     viewing: {
       eyebrow: 'Private Viewing',
       title: 'Una selezione *privata*.',
-      lead: '48 vetture a catalogo. Qui alcune, sotto la luce giusta.',
+      lead: '48 vetture in collezione. Qui alcune, sotto la luce giusta.',
       prev: 'Vettura precedente',
       next: 'Vettura successiva',
       request: 'Richiedi',
-      all: 'Tutta la flotta',
+      all: 'Tutta la collezione',
       catalogTitle: 'La *collezione*.',
-      catalogLead: '48 vetture a catalogo. Filtri per categoria e marca.',
+      catalogLead: '48 vetture in collezione. Filtri per categoria e marca.',
     },
     concierge: {
-      title: 'Più che noleggio. *Concierge.*',
+      title: 'Oltre il noleggio. *Un concierge personale.*',
       services: 'Oltre la vettura',
     },
     guarantees: 'Garanzie',
     deliveries: {
-      title: 'Consegne *reali*.',
+      title: 'Dove siamo *stati*.',
     },
     testimonials: {
       title: 'Parole *riservate*.',
@@ -35,12 +35,12 @@ export const nocturne = defineThemeDict({
       title: 'Domande *frequenti*.',
     },
     contact: {
-      eyebrow: 'Concierge H24 7/7',
+      eyebrow: 'Concierge sempre attivo',
       title: 'Un messaggio. *Il resto è nostro.*',
       lead: 'Risposta in meno di un’ora.',
     },
     footer: {
-      line: 'Dalla marina alla strada.',
+      line: 'Dal molo al volante.',
     },
     builder: {
       eyebrow: 'Richiesta riservata',
@@ -67,21 +67,21 @@ export const nocturne = defineThemeDict({
     viewing: {
       eyebrow: 'Private Viewing',
       title: 'A *private* selection.',
-      lead: '48 cars in the catalogue. A few of them, in the right light.',
+      lead: '48 cars in the collection. A few of them, in the right light.',
       prev: 'Previous car',
       next: 'Next car',
       request: 'Request',
-      all: 'The whole fleet',
+      all: 'The whole collection',
       catalogTitle: 'The *collection*.',
-      catalogLead: '48 cars in the catalogue. Filter by category and marque.',
+      catalogLead: '48 cars in the collection. Filter by category and marque.',
     },
     concierge: {
-      title: 'More than rental. *Concierge.*',
+      title: 'Beyond rental. *A personal concierge.*',
       services: 'Beyond the car',
     },
     guarantees: 'Guarantees',
     deliveries: {
-      title: 'Real *deliveries*.',
+      title: 'Where we’ve *been*.',
     },
     testimonials: {
       title: 'Words, in *confidence*.',
@@ -90,12 +90,12 @@ export const nocturne = defineThemeDict({
       title: 'Frequently *asked*.',
     },
     contact: {
-      eyebrow: 'Concierge 24/7',
+      eyebrow: 'Concierge always on',
       title: 'One message. *We handle the rest.*',
       lead: 'Reply in under an hour.',
     },
     footer: {
-      line: 'From the marina to the road.',
+      line: 'From the dock to the wheel.',
     },
     builder: {
       eyebrow: 'Private request',

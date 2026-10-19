@@ -1,7 +1,7 @@
 # CLAUDE.md — carrent-demo
 
 Multi-theme design demo for **Rial Rent** (rialrent.it): one site, five styles.
-**Displayed brand = GRANDTOUR** (demo name, monogram "GT"), only via `t('brand.name')` / `t('brand.monogram')` — never hard-code it. Company data (RIAL S.R.L., P.IVA, contacts, WhatsApp number) stays real. Same data, same pricing, same store; each style changes skin, typography, motion and one or two signature interactions. Full brief: `BRIEF.md` (IT).
+**Displayed brand = GRANDTOUR** (demo name, monogram "GT"), only via `t('brand.name')` / `t('brand.monogram')` — never hard-code it. Company data (RIAL S.R.L., P.IVA, contacts) stays real, but **wa.me links never target a real number** in the demo (`CONTACTS.whatsappDigits = null` → `https://wa.me/?text=…`, recipient chosen in WhatsApp). Build every WhatsApp href with `waUrl()` / `waContactUrl()` from lib/whatsapp — never hand-write `wa.me/<digits>`. Same data, same pricing, same store; each style changes skin, typography, motion and one or two signature interactions. Full brief: `BRIEF.md` (IT).
 
 ## Stack (non-negotiable)
 - Next.js 15 App Router, TypeScript strict, `output: 'export'`, `trailingSlash: true`, `images.unoptimized: true`
@@ -73,7 +73,7 @@ components/
 
 ## Shared logic (untouchable from themes; themes pass props only)
 - `estimate(input, rates)` → `{ lines[], subtotal, onRequest[], total, currency, days }`. Always labelled "Stima indicativa · il concierge conferma in meno di un'ora" (`t('price.disclaimer')`). Use the `useEstimate()` hook.
-- `buildMessage()` / `waUrl()` → `https://wa.me/393202934909?text=…`. Always show the text preview before the click (`<WhatsAppPreview>` in neutral or a themed equivalent).
+- `buildMessage()` / `waUrl()` → `https://wa.me/?text=…` (no number in the demo). Always show the text preview before the click (`<WhatsAppPreview>` in neutral or a themed equivalent).
 - Store: `carId cityId deliveryType returnCityId dateFrom dateTo extras[] step` (+ `locale` in `useUI`). `validateStep(state, step)` returns `null` or an i18n key with the reason; Next is disabled and the reason is written.
 - `useBuilderHydrated()` — persisted stores rehydrate after mount (`skipHydration`) to avoid SSR mismatches.
 

@@ -17,13 +17,13 @@ export const grandPrix = defineThemeDict({
     board: {
       kicker: 'Tabellone partenze',
       title: 'Departures',
-      note: 'Tabellone d’esempio: città e auto dalle consegne reali, stati dimostrativi.',
+      note: 'Tabellone d’esempio: città e auto delle nostre consegne, stati dimostrativi.',
       cols: { city: 'Città', code: 'Codice', car: 'Auto', status: 'Stato' },
       status: ['Consegnata', 'In partenza', 'Al box', 'In pista'],
     },
     grid: {
       kicker: 'Griglia di partenza',
-      lead: 'Otto in griglia, quarantotto a catalogo.',
+      lead: 'Otto in griglia, quarantotto in collezione.',
       slot: 'P{n}',
       times: 'Scheda tempi',
       all: 'Tutta la griglia',
@@ -44,7 +44,7 @@ export const grandPrix = defineThemeDict({
     radio: {
       kicker: 'Radio box',
       title: 'Chiama il box.',
-      lead: 'Un messaggio e il concierge è in linea. H24, 7 giorni su 7.',
+      lead: 'Un messaggio e il concierge è in linea. Giorno e notte, sempre.',
     },
     builder: {
       lap: 'Giro {n}/{total}',
@@ -89,13 +89,13 @@ export const grandPrix = defineThemeDict({
     board: {
       kicker: 'Departure board',
       title: 'Departures',
-      note: 'Example board: cities and cars from real deliveries, statuses for demo only.',
+      note: 'Example board: cities and cars from our deliveries, statuses for demo only.',
       cols: { city: 'City', code: 'Code', car: 'Car', status: 'Status' },
       status: ['Delivered', 'Departing', 'In the pits', 'On track'],
     },
     grid: {
       kicker: 'Starting grid',
-      lead: 'Eight on the grid, forty-eight in the catalogue.',
+      lead: 'Eight on the grid, forty-eight in the collection.',
       slot: 'P{n}',
       times: 'Timing sheet',
       all: 'Full grid',

@@ -28,6 +28,7 @@ import {
 import { useT } from '@/lib/i18n';
 import { usePrefersReducedMotion } from '@/lib/hooks';
 import { useBuilder, useRateTable } from '@/lib/store';
+import { waContactUrl } from '@/lib/whatsapp';
 import BrandMark, { BrandScope, brandStyle, brandVars, flagshipOf, rovingKeyNav } from './brand';
 
 const BRANDS_IN_FLEET = brandsInFleet();
@@ -448,7 +449,7 @@ export function HomeSections() {
               {t('cta.builder')} →
             </Link>
             <a
-              href={`https://wa.me/${CONTACTS.whatsappDigits}`}
+              href={waContactUrl(t.locale)}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex min-h-12 items-center justify-center rounded-theme border border-white/40 px-6 font-semibold text-bg transition-colors hover:bg-white/10"

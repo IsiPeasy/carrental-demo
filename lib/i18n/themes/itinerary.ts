@@ -5,10 +5,10 @@ export const itinerary = defineThemeDict({
   it: {
     os: 'Concierge OS',
     live: 'Live',
-    online: 'Concierge online · H24 7/7',
+    online: 'Concierge online · sempre attivo',
     hero: {
       kicker: 'Europe live',
-      title: 'Un solo interlocutore. Tutta l’Europa.',
+      title: 'Un concierge. Tutta l’Europa.',
       lead: 'Auto, jet, yacht e accoglienza coordinati da un unico concierge. Scrivi una volta, al resto pensiamo noi.',
       counter: '{cars} auto · consegna in {countries} paesi',
       cities: '{n} città',
@@ -36,7 +36,7 @@ export const itinerary = defineThemeDict({
     cities: {
       kicker: 'Copertura',
       title: 'Città servite',
-      lead: 'Filtra per paese. Consegna dedicata in hotel, villa, aeroporto o FBO.',
+      lead: 'Filtra per paese. Consegna in mano in hotel, villa, aeroporto o FBO.',
       all: 'Tutti',
       count: '{n} città',
       zone: 'Zona',
@@ -53,8 +53,8 @@ export const itinerary = defineThemeDict({
       lead: 'Risposta in meno di un’ora, in italiano o in inglese.',
     },
     fleet: {
-      kicker: 'Flotta',
-      all: 'Vedi tutta la flotta',
+      kicker: 'Collezione',
+      all: 'Vedi tutta la collezione',
       specs: 'Specifiche',
       results: 'Risultati',
     },
@@ -104,10 +104,10 @@ export const itinerary = defineThemeDict({
   en: {
     os: 'Concierge OS',
     live: 'Live',
-    online: 'Concierge online · 24/7',
+    online: 'Concierge online · always on',
     hero: {
       kicker: 'Europe live',
-      title: 'One point of contact. All of Europe.',
+      title: 'One concierge. All of Europe.',
       lead: 'Cars, jets, yachts and arrivals coordinated by a single concierge. Write once, we handle the rest.',
       counter: '{cars} cars · delivery in {countries} countries',
       cities: '{n} cities',
@@ -135,7 +135,7 @@ export const itinerary = defineThemeDict({
     cities: {
       kicker: 'Coverage',
       title: 'Cities served',
-      lead: 'Filter by country. Dedicated delivery to hotel, villa, airport or FBO.',
+      lead: 'Filter by country. Hand delivery to hotel, villa, airport or FBO.',
       all: 'All',
       count: '{n} cities',
       zone: 'Zone',
@@ -152,8 +152,8 @@ export const itinerary = defineThemeDict({
       lead: 'Reply in under an hour, in Italian or English.',
     },
     fleet: {
-      kicker: 'Fleet',
-      all: 'See the whole fleet',
+      kicker: 'Collection',
+      all: 'See the whole collection',
       specs: 'Specs',
       results: 'Results',
     },

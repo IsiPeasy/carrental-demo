@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { CONTACTS } from '@/lib/data';
+import { waContactUrl } from '@/lib/whatsapp';
 import { useT } from '@/lib/i18n';
 import { useStyleHref } from '@/components/ThemeProvider';
 
@@ -11,7 +12,7 @@ export function FooterContacts({ className = '' }: { className?: string }) {
     <dl className={`grid gap-x-8 gap-y-3 text-sm sm:grid-cols-2 lg:grid-cols-4 ${className}`}>
       <div>
         <dt className="label-caps text-ink-2">{t('contacts.whatsapp')} · {t('contacts.phone')}</dt>
-        <dd><a className="hover:text-accent" href={`https://wa.me/${CONTACTS.whatsappDigits}`}>{CONTACTS.whatsapp}</a></dd>
+        <dd><a className="hover:text-accent" href={waContactUrl(t.locale)} target="_blank" rel="noopener noreferrer">{CONTACTS.whatsapp}</a></dd>
       </div>
       <div>
         <dt className="label-caps text-ink-2">{t('contacts.email')}</dt>

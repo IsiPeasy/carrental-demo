@@ -23,3 +23,11 @@ playwright-report/
 !.vscode/settings.json
 # claude agent worktrees
 .claude/
+# misc
+coverage/
+.turbo/
+.idea/
+*.pem
+npm-debug.log*
+yarn-error.log*
+.pnpm-debug.log*

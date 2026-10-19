@@ -47,8 +47,13 @@ export function buildMessage(s: BuilderState, est: Estimate, locale: Locale): st
   return lines.join('\n');
 }
 
+/** wa.me base: no number in the demo (see CONTACTS.whatsappDigits). */
+export function waBase(): string {
+  return `https://wa.me/${CONTACTS.whatsappDigits ?? ''}`;
+}
+
 export function waUrl(text: string): string {
-  return `https://wa.me/${CONTACTS.whatsappDigits}?text=${encodeURIComponent(text)}`;
+  return `${waBase()}?text=${encodeURIComponent(text)}`;
 }
 
 /** Plain contact link without a pre-filled request. */

@@ -368,24 +368,24 @@ export const TESTIMONIALS: { name: string; role: L10n; cityId: string; carId: st
 
 export const FAQ: { q: L10n; a: L10n }[] = [
   {
-    q: { it: 'In quali paesi operate?', en: 'Which countries do you serve?' },
+    q: { it: 'Fin dove arrivate?', en: 'How far do you go?' },
     a: {
       it: 'Consegniamo in tutta Europa: Italia, Francia, Principato di Monaco, Svizzera, Spagna, Regno Unito, Austria e Germania.',
       en: 'We deliver across Europe: Italy, France, the Principality of Monaco, Switzerland, Spain, the United Kingdom, Austria and Germany.',
     },
   },
   {
-    q: { it: 'Che auto avete in flotta?', en: 'Which cars are in the fleet?' },
+    q: { it: 'Quali auto sono in collezione?', en: 'Which cars are in the collection?' },
     a: {
-      it: '48 vetture a catalogo tra supercar, GT, SUV di lusso e van executive: Ferrari, Lamborghini, Porsche, Mercedes-AMG, Land Rover e altre.',
-      en: '48 cars in the catalogue across supercars, GTs, luxury SUVs and executive vans: Ferrari, Lamborghini, Porsche, Mercedes-AMG, Land Rover and more.',
+      it: '48 vetture tra supercar, GT, SUV di lusso e van executive, firmate Ferrari, Lamborghini, Porsche, Mercedes-AMG, Land Rover e altre.',
+      en: '48 cars across supercars, GTs, luxury SUVs and executive vans, from Ferrari, Lamborghini, Porsche, Mercedes-AMG, Land Rover and more.',
     },
   },
   {
-    q: { it: 'Consegnate in aeroporto o in hotel?', en: 'Do you deliver to airports or hotels?' },
+    q: { it: 'Dove mi consegnate l’auto?', en: 'Where do you hand over the car?' },
     a: {
-      it: 'Sì: hotel, villa, aeroporto o FBO per i voli privati. La consegna è dedicata, con un nostro incaricato.',
-      en: 'Yes: hotel, villa, airport or FBO for private flights. Delivery is dedicated, handled by one of our staff.',
+      it: 'Dove preferisci: hotel, villa, ufficio, aeroporto o FBO per i voli privati. Un nostro incaricato ti consegna le chiavi di persona.',
+      en: 'Wherever suits you: hotel, villa, office, airport or FBO for private flights. One of our staff hands you the keys in person.',
     },
   },
   {
@@ -396,14 +396,14 @@ export const FAQ: { q: L10n; a: L10n }[] = [
     },
   },
   {
-    q: { it: 'Posso riconsegnare in un altro paese?', en: 'Can I return the car in another country?' },
+    q: { it: 'Posso lasciare l’auto in un altro paese?', en: 'Can I leave the car in another country?' },
     a: {
       it: 'Sì, il noleggio one-way in altra nazione è disponibile su quotazione.',
       en: 'Yes, one-way rentals to another country are available on quotation.',
     },
   },
   {
-    q: { it: 'Quanto costa?', en: 'How much does it cost?' },
+    q: { it: 'Da quanto si parte?', en: 'Where do prices start?' },
     a: {
       it: 'Si parte da circa €1.200 al giorno; il prezzo dipende da vettura, durata e consegna.',
       en: 'Prices start from around €1,200 per day, depending on car, duration and delivery.',
@@ -413,7 +413,12 @@ export const FAQ: { q: L10n; a: L10n }[] = [
 
 export const CONTACTS = {
   whatsapp: '+39 320 293 4909',
-  whatsappDigits: '393202934909',
+  /**
+   * WhatsApp target for wa.me links. `null` in the demo: links open WhatsApp
+   * with the message pre-filled and let the user pick the recipient, so no real
+   * number is ever contacted. Set the digits (e.g. '39…') for production.
+   */
+  whatsappDigits: null as string | null,
   phone: '+39 320 293 4909',
   email: 'info@rialrent.it',
   address: 'Milano, Via Privata Platone',

@@ -69,10 +69,13 @@ for (const vp of VIEWPORTS) {
         await shoot(`/${s}/configura/?step=${i}`, `${s}-3-configura-${i}`);
         if (i === 4) {
           const hrefs = await page.$$eval('a[href^="https://wa.me/"][href*="text="]', (as) => as.map((a) => a.href));
+          const all = await page.$$eval('a[href*="wa.me/"]', (as) => as.map((a) => a.href));
+          for (const h of all) if (/wa\.me\/\d/.test(h)) report.whatsapp.push({ style: s, vp: vp.name, ok: false, reason: 'real number in ' + h });
           for (const h of hrefs) {
             const u = new URL(h);
             const text = u.searchParams.get('text') ?? '';
-            const ok = u.pathname === '/393202934909' && text.includes('F8 Spider') && text.includes('Costa Smeralda');
+            // demo: no real number in the link (wa.me/?text=…), recipient chosen in WhatsApp
+            const ok = u.pathname === '/' && text.includes('F8 Spider') && text.includes('Costa Smeralda');
             report.whatsapp.push({ style: s, vp: vp.name, ok, length: text.length });
           }
           if (!hrefs.length) report.whatsapp.push({ style: s, vp: vp.name, ok: false, reason: 'no wa.me link' });

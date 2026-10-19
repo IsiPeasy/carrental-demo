@@ -1,7 +1,7 @@
 # GRANDTOUR — un sito, cinque stili
 
 Demo di design per **Rial Rent** (rialrent.it · European Luxury Mobility Concierge).
-Nel sito il marchio mostrato è **GRANDTOUR** (nome demo, monogramma "GT"): si cambia in un punto solo, `brand.name` / `brand.monogram` in `lib/i18n/{it,en}.ts`. Contatti, dati societari e link WhatsApp restano quelli reali del cliente.
+Nel sito il marchio mostrato è **GRANDTOUR** (nome demo, monogramma "GT"): si cambia in un punto solo, `brand.name` / `brand.monogram` in `lib/i18n/{it,en}.ts`. Contatti e dati societari restano quelli del cliente; **i link WhatsApp invece non puntano a nessun numero reale**: aprono WhatsApp col messaggio già scritto e si sceglie a chi mandarlo (per la produzione basta impostare `CONTACTS.whatsappDigits` in `lib/data.ts`).
 Lo stesso sito (home, flotta, Trip Builder a 5 step, riepilogo → WhatsApp) è applicato con **cinque stili diversi**: stessi dati, stessa logica, stessa stima di prezzo. Cambiano pelle, tipografia, motion e una o due interazioni firma per stile. Il cliente sceglie una direzione.
 
 > Demo di design · contenuti e prezzi indicativi.
@@ -91,7 +91,7 @@ Nessuna variabile d'ambiente richiesta.
 
 ## Cose da sapere
 - Le tariffe sono demo (tranne l'ingresso "da circa €1.200/giorno") e si possono cambiare da `/{stile}/admin/`: restano solo nel browser di chi le modifica.
-- Il link WhatsApp porta al numero reale del cliente (+39 320 293 4909) con il messaggio precompilato.
+- I link WhatsApp sono senza numero (`https://wa.me/?text=…`): WhatsApp si apre col messaggio precompilato e chiede a chi inviarlo. Nessun messaggio arriva al cliente durante le demo.
 - Con "riduci movimento" attivo nel sistema operativo il 3D è sostituito dalla silhouette statica e le animazioni si fermano sullo stato finale.
 - In VS Code: "Run and Debug" → *Rial Rent: build + preview export* mostra il sito come su Vercel.
 
