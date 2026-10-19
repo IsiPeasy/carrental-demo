@@ -3,10 +3,13 @@
   "configurations": [
     {
       "name": "Rial Rent: dev server",
-      "type": "node-terminal",
+      "type": "node",
       "request": "launch",
-      "command": "npm run dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
       "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"],
       "serverReadyAction": {
         "pattern": "- Local:.+(https?://\\S+)",
         "uriFormat": "%s",
@@ -15,10 +18,13 @@
     },
     {
       "name": "Rial Rent: dev server + Chrome debug",
-      "type": "node-terminal",
+      "type": "node",
       "request": "launch",
-      "command": "npm run dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
       "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"],
       "serverReadyAction": {
         "pattern": "- Local:.+(https?://\\S+)",
         "uriFormat": "%s",
@@ -28,10 +34,12 @@
     },
     {
       "name": "Rial Rent: build + preview export (come su Vercel)",
-      "type": "node-terminal",
+      "type": "node",
       "request": "launch",
-      "command": "npm run build && cd out && python3 -m http.server 4321",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["-c", "npm run build && cd out && python3 -u -m http.server 4321"],
       "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
       "serverReadyAction": {
         "pattern": "Serving HTTP on .* port (\\d+)",
         "uriFormat": "http://localhost:%s",
@@ -40,10 +48,13 @@
     },
     {
       "name": "Rial Rent: QA screenshots",
-      "type": "node-terminal",
+      "type": "node",
       "request": "launch",
-      "command": "BASE=http://localhost:4321 npm run qa",
-      "cwd": "${workspaceFolder}"
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "qa"],
+      "env": { "BASE": "http://localhost:4321" },
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
     }
   ]
 }
